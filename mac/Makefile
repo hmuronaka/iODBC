@@ -149,6 +149,14 @@ ifeq (10.8, $(findstring 10.8, $(macosx_version)))
     IODBC_TARGET=10.8
 endif
 
+#
+#  Mac OS X 10.9
+#
+ifeq (10.9, $(findstring 10.9, $(macosx_version)))
+    PROJBUILD := /usr/bin/xcodebuild -configuration $(MODEL) -sdk macosx10.9
+    IODBC_TARGET=10.9
+endif
+
 
 #
 #  Pass settings to xcodebuild
